@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<?php include('Login.php') ?>
+<?php include('BlogpostServer.php') ?>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home-CommunityX.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js">
+<link rel="stylesheet" href="<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link rel="stylesheet" href="<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+
+  </head>
+  <body>
+    <div class="full_page">
+      <div class="nav_bar">
+        <h1>      <img src="Schoolcrest.png" alt="">     <!-- <img src="CULC_logo_3833.png" alt="">-->
+
+CommunityX
+</h1>
+        <ul>
+
+          <input class="Search_box"  type="text" name="Search_box"  placeholder="Search">
+          <li> <a href="Index.php?Home?#active"><i class="fas fa-home" aria-hidden="true"></i> Home </a> </li>
+          <li> <a href="StaffLogin.php"> <i class="fas fa-user-tie"></i> Staff</a> </li>
+          <li> <a href="StudentLogin.php"><i class="fas fa-user-graduate"></i>Student</a> </li>
+          <li> <a href="Achievement.php"><i class="fas fa-trophy"></i>Acheivements</a> </li>
+          <li> <a href="Forum.php? Forum Session active"><i class="fas fa-scroll"></i>Forum</a> </li>
+          <li> <a href="#"><i class="fas fa-comments"></i> Chat</a> </li>
+          <li> <a href="#"><i class="fas fa-rss"></i> NewsFeed</a> </li>
+        </ul>
+      </div>
+
+    <div class="container">
+      <div class="left-container">
+        <div class="outter_display">
+      <form id="userform" action="Index.php" method="post" enctype="multipart/form-data">
+              <img id="profile-pic" src="pro.png" alt="Check your network!">
+              <h4>  <span class="username"><?= $_SESSION['firstname']?>
+              <?= $_SESSION['lastname']?></span></h4>
+              <button  class="display_btn" type="button" name="Profile" onclick="document.getElementById('left-pane').style.display='block'">Profile<i class="fas fa-caret-down"></i></button>
+
+      <!--     <button class="profile-settings-btn" aria-label = "profile settings"><i class="fas fa-cog" aria-hidden = "true"></i></button>-->
+      </form>
+        <input type="file" name="" value="Edit-Profile">
+    </div>
+<div id="left-pane">
+  <button id="hide-btn" type="button" name="button" onclick="document.getElementById('left-pane').style.display='none'">Hide</button>
+  <button id = "settingstool-btn" type="button" name="button" onclick="settings();">Settings</button>
+
+<div id="profile">
+<!--  <div class="profile-settings">
+    <ul>
+this was where the img profile was keppt
+    </ul>
+  </div><br/><br/><br/><br/><br/>
+  <br/><br/>-->
+  <div class="profile-stats">
+    <ul>
+      <li> <a href="#"><i class="far fa-calendar"> </i> Year </a> </li>
+      <li>  <a href="#"> <i class="fas fa-university"> </i> Department</a> </li>
+      <li>  <a href="#"><i class="far fa-building"> House  </i> </a></li>
+    <!--  <li>  <a href="#"><i class="fas fa-th"></i> Post</a> </li>-->
+    </ul>
+
+  </div>
+  <div class="profile-bio">
+    <p> <em>Deirdre Lopez My school is going to be first with it's own social media platform </em> </p>
+
+  </div>
+  <div class="Links">
+    <ul>
+            <li> <a href="#">Pokes</a></li>
+            <li> <a href="#">Groups + </a></li>
+            <li> <a href="#">Memories</a></li>
+            <li> <a href="#">Following</a> </li>
+            <li> <a href="#">Add  account</a> </li>
+            <button id="logout" name = 'logout' > <a href="CommunityX.php"><i class="fas fa-power-off"></i>Logout</a> </button>
+
+    </ul>
+  </div>
+
+  <div id="Settings-info" style="display:none" >
+    <ul>
+      <li><a href="#">Profile Information</a> </li>
+      <li><a href="#">Account</a> </li>
+      <li><a href="#">Display</a> </li>
+      <li><a href="#">Chats</a> </li>
+      <li><a href="#">Your Activity</a> </li>
+      <li><a href="#">Notifications</a> </li>
+      <li><a href="#">Language</a> </li>
+      <li><a href="#">Ads</a> </li>
+      <li><a href="#">Payments</a> </li>
+      <li><a href="#">Help</a> </li>
+      <li><a href="#">About</a> </li>
+
+    </ul>
+
+  </div>
+</div>
+</div>
+  </div>
+<div class="main-stream">
+ <form class="blog" action="Index.php" method="post" enctype="multipart/form-data">
+   <img id="blog-profile-pic" src="pro.png" alt="Check your network!">
+   <textarea  id="textarea" name="textarea" rows="" cols="50" placeholder="What's on your mind ?"></textarea>
+<ul >
+<li> <a href="#">Live  <i class="fas fa-video"></i></a></li>
+<li> <label for="image">Photo <i class="far fa-image"></i></label></li>
+  <input type="file" name="image" style="display:none" id="image">
+    <button type="submit" name="Upload">Upload</button>
+</ul>
+
+</form>
+<div class="Posts">
+  <?php foreach($display as $retrieve) { ?>
+    <img src="<?php echo $retrieve['image']?>" ><br/>
+    <button id="pokebtn" type="button" name="button"onclick="colorchange1()"><i id="pokeicon" class="fab fa-phoenix-framework"></i>Poke</button>
+     <button id="likebtn" type="button" name="button" onclick="colorchange()"><i id="likeicon" class="far fa-heart"></i>Like</button>
+     <button type="button" name="button"><i class="fas fa-sync"></i>Re-post</button>
+     <button type="button" name="button"><i class="far fa-comment"></i>Comments</button>
+     <button type="button" name="button" onclick="document.getElementById('postmore').style.display='block'">---</button>
+     <br/><br/>
+     <div  id="postmore" hidden>
+       <fieldset id="postmorefield">
+       <button type="button" name="button">Save   </button>
+       <button type="button" name="button">Delete </button>
+       <button type="button" name="button">Report </button>
+       <button type="button" name="button">Share </button>
+       <button type="button" name="button" onclick="document.getElementById('postmore').style.display='none'">Hide </button>
+
+ </fieldset>
+     </div>
+  <?php } ?>
+</div>
+</div>
+
+<div class="right_column">
+   <a href="adscheckout.php"><button type="button" name="button">+ Create an Ad</button></a>
+  <div class="slideregion">
+    <div class="slide">
+      <img src="ummi_flyer.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="flyer1.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="flyer2.png" alt="">
+    </div>
+    <div class="slide">
+      <img src="flyer3.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="flyer4.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="flyer5.jpg" alt="">
+    </div>
+  </div>
+  <div class="slidecontrols">
+    <button id="prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
+    <button id="next-btn"><i class="fas fa-chevron-circle-right"></i></button>
+  </div>
+
+</div>
+
+<div class="Trending-pane">
+  <marquee behavior="scroll" direction="left" >
+<h3><em>Official Trends For You</em></h3>
+ </marquee>
+
+ <!--<form  method="post" enctype="multipart/form-data">-->
+   <ul>
+
+      <li>   <img src="pro.png" alt="Check your network!"> <label for="">STIME</label>
+           <button id="subbutton"  onclick="textchange()" >Subscribe</button>
+       </li>
+      <li>   <img src="pro.png" alt="Check your network!"><label for="">Maxwell</label>
+        <button class="subbutton1" type="button" name="follow" onclick="textchange()">Subscribe</button>
+</li>
+      <li>  <img src="pro.png" alt="Check your network!"><label for="">Desmond</label>
+        <button class="subbutton2" type="button" name="follow" onclick="textchange()">Subscribe</button>
+</li>
+      <li>   <img src="pro.png" alt="Check your network!"><label for="">Richmond</label>
+        <button class="subbutton3" type="button" name="follow" onclick="textchange()">Subscribe</button>
+</li>
+      <li>   <img src="pro.png" alt="Check your network!"><label for="">Innovation</label>
+          <button class="subbutton4" type="button" name="follow"  onclick="textchange()">Subscribe</button>
+          </a>
+</li>
+
+
+</ul>
+
+ <!--     <button class="profile-settings-btn" aria-label = "profile settings"><i class="fas fa-cog" aria-hidden = "true"></i></button>-->
+ </form>
+</div>
+
+
+    </div>
+
+      </div>
+
+    </div>
+     <script src="buttonfunc.js" charset="utf-8"></script>
+    <script src="slider.js"></script>
+  </body>
+
+</html>
