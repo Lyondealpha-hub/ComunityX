@@ -1,0 +1,147 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css";
+*{
+  margin:0;
+  padding: 0;
+
+}
+body {
+  background-color: #efefef;
+}
+.nav_bar {
+  margin:7px 0;
+  background-color: white;
+  padding:5px 0;
+}
+.nav_bar img {
+  width: 50px;
+    background-color: #fdafda;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-collapse: collapse;
+    border-radius: 17px;
+}
+.nav_bar ul {
+  display: inline-flex;
+  margin-left: 60px;
+  list-style: none;
+
+}
+.nav_bar h1 {
+  letter-spacing: 2.0px;
+
+}
+.Search_box{
+  width:375px;
+  border-width: thin;
+  padding:5px 0;
+  padding-left: 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 24px;
+  font-style: italic;
+}
+#Seachfinder{
+  padding:4px 17px;
+  border-radius: 5px;
+  margin-top: 3px;
+  font-size: 24px;
+}
+.hub-template {
+  background-color: white;
+  min-width:75vw;
+  min-height:500px;
+  padding: 12px 1px;
+  margin:5% 15%;
+  position: absolute;
+  border-radius: 8px;
+  border-left: thick;
+}
+.hub-template i{
+  float: right;
+  margin-right: 15px;
+
+}
+.hub-template h3{
+  padding: 9px 9px;
+}
+
+.Gen-discuss,.Tech-discuss,.Business-discuss,.Off-discuss {
+  padding: 38px 0;
+}
+.Gen-discuss a,.Tech-discuss a,.Business-discuss a,.Off-discuss a{
+  text-decoration: none;
+}
+.Gen-discuss a:hover,.Tech-discuss a:hover,.Business-discuss a:hover,.Off-discuss a:hover{
+  color: red;
+  cursor:pointer;
+}
+
+ .Gen-discuss h3,.Tech-discuss h3,.Business-discuss h3,.Off-discuss h3{
+  font-family: "Times New Roman",Times,serif;
+  font-size: 20px;
+  margin-left: 35px;
+  font-weight: bold;
+}
+.Gen-discuss h3 i,.Tech-discuss h3 i,.Business-discuss h3 i,.Off-discuss h3 i{
+  float: left;
+  font-size:50px;
+  font-weight: lighter;
+}
+
+ .Gen-discuss h4,.Tech-discuss h4,.Business-discuss h4,.Off-discuss h4{
+  margin-left: 75px;
+  font-weight: lighter;
+}
+
+
+.Gen-discuss button,.Tech-discuss button,.Business-discuss button,.Off-discuss button{
+  float: right;
+  background-color:black;
+  color:white;
+  outline:none;
+  border-radius: 5px;
+  padding:8px 28px;
+  margin-top: -28px;
+  margin-right: 15px;
+}
+#Post-thread1,#Post-thread2,#Post-thread3,#Post-thread4 {
+  background-color: #c0c0c0;
+  margin:10px 0;
+  padding-bottom: 60px;
+  border-radius: 6px;
+  position: relative;
+}
+#Post-thread1 h3,#Post-thread2 h3,#Post-thread3 h3,#Post-thread4 h3{
+  font-family: "Times New Roman",Times,serif;
+  margin-left: 35px;
+  padding: 13px 6px;
+  font-size: 20px;
+}
+#Post-thread1 h4,#Post-thread2 h4,#Post-thread3 h4,#Post-thread4 h4{
+  font-family: "Times New Roman",Times,serif;
+  margin-left: 75px;
+  font-weight: lighter;
+  padding: 13px 6px;
+}
+#Post-thread1 textarea,#Post-thread2 textarea,#Post-thread3 textarea,#Post-thread4 textarea {
+
+  margin-left: 112px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 20px;
+  display: block;
+  background-color: grey;
+  font-family: "Times New Roman",Times,serif;
+
+}
+#Post-thread1 button,#Post-thread2 button,#Post-thread3 button,#Post-thread4 button {
+
+  margin-left:95px;
+  margin-top: 18px;
+  padding: 12px 35px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 6px;
+  outline:none;
+  transition: transparent;
+}
