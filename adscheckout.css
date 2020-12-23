@@ -1,0 +1,119 @@
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Times New Roman',sans-serif;
+
+}
+.header img {
+  width: 50px;
+    background-color: #fdafda;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-collapse: collapse;
+    border-radius: 17px;
+}
+.header h2 {
+  text-align: center;
+  font-size: 28px;
+}
+.body_content {
+float: left;
+  background-color: #efefef;
+margin-left: 100px;
+margin-top: 8px;
+}
+.body_content div {
+  display: inline-flex;
+  flex : 50%;
+}
+.Ads-info {
+  padding: 10px 0;
+  margin-left: 16px;
+  list-style: none;
+  margin-right: 326px;
+}
+.Ads-info ul{
+  list-style: none;
+}
+.Ads-info ul li {
+  padding: 18px 0;
+  font-size: 22px;
+  display: block;
+
+}
+#Package-type {
+  margin-left: 20px;
+  padding: 8px 24px;
+  font-size: 24px;
+  margin-top: 8px;
+}
+#category {
+  margin-left: 20px;
+  padding: 8px 24px;
+  font-size: 24px;
+  margin-top: 8px;
+}
+.Ads-info li input{
+  font-size: 24px;
+  margin-left: 18px;
+  margin-top: 8px;
+  padding-left: 8px;
+}
+.Ads-info li label {
+
+  padding: 12px 22;
+}
+.Payment-info {
+  padding: 10px 0;
+  margin-left: 16px;
+  list-style: none;
+  margin-right: 326px;
+}
+#Billing-duration {
+  margin-left: 20px;
+  padding: 8px 24px;
+  font-size: 24px;
+  margin-top: 8px;
+}
+.Payment-info ul{
+  list-style: none;
+}
+.Payment-info ul li {
+  padding: 20px 0;
+  font-size: 22px;
+  display: block;
+
+}
+.Payment-info li input{
+  font-size: 24px;
+  margin-left: 18px;
+  margin-top: 8px;
+  padding-left: 8px;
+}
+.Payment-info li label {
+  padding-left: 22px;
+}
+#Mobilemoney {
+  display: none;
+  padding: 12px 0;
+}
+#Mobilemoney input {
+  font-size: 24px;
+  padding: 3px 0px;
+}
+#Payment-option {
+  padding: 8px 10px;
+  margin-top: 8px;
+
+  font-size: 24px;
+}
+.Payment-info button{
+  padding: 8px 12px;
+  font-size: 20px;
+  margin-left: 86px;
+  color: blue;
+}
+/*.Payment-info img {
+  width: 5%;
+  padding: 0 15px;
+}*/
